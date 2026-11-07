@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101323">
+  <meta name="description" content="Żartobliwa strona-prank. Żadnych prawdziwych Robuxów — tylko Rickroll!">
+  <title>Darmowe Robuxy?! — mały prank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <div class="glow glow-one" aria-hidden="true"></div>
+    <div class="glow glow-two" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#start" aria-label="Robuxy? Start">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>robuxy<span class="brand-dot">?</span></span>
+      </a>
+      <span class="badge"><span class="status-dot"></span> Nie wierzysz? Sprawdź!</span>
+    </header>
+
+    <section class="hero" id="start" aria-labelledby="headline">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true">✦</span> Jedyna legit oferta w internecie!*</p>
+        <h1 id="headline">Darmowe<br><span>Robuxy!</span></h1>
+        <p class="intro">Tak, dobrze widzisz. Kliknij i odbierz swoją… <strong>niespodziankę</strong>.</p>
+        <button class="claim-button" id="claim-button" type="button">
+          <span>Odbieram Robuxy</span><span class="button-arrow" aria-hidden="true">↗</span>
+        </button>
+        <p class="fine-print">* absolutnie nie jest scamem 😄</p>
+      </div>
+
+      <div class="coin-scene" aria-hidden="true">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="coin coin-back">R</div>
+        <div class="coin coin-front"><span>R</span><i>✦</i></div>
+        <span class="spark spark-a">✦</span><span class="spark spark-b">✧</span>
+        <span class="spark spark-c">✧</span><span class="coin-caption">100% prawdziwe<br><b>(nie)</b></span>
+      </div>
+    </section>
+
+    <section class="reveal" id="surprise" hidden aria-live="polite">
+      <div class="reveal-heading">
+        <span class="reveal-icon" aria-hidden="true">🎉</span>
+        <div><p class="eyebrow">no i masz</p><h2>Zostałeś Zrickrollowany! xD</h2></div>
+      </div>
+      <p class="reveal-note">Żadnych prawdziwych Robuxów, logowania ani zbierania danych — tylko klasyczny żart.</p>
+    </section>
+
+    <footer><span>To prank xd</span><span class="footer-star" aria-hidden="true">✳</span><span>Nabrałeś się? xd</span></footer>
+  </main>
+  <script>
+    const claimButton = document.querySelector('#claim-button');
+    const surprise = document.querySelector('#surprise');
+
+    claimButton.addEventListener('click', () => {
+      window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank', 'noopener,noreferrer');
+      surprise.hidden = false;
+      surprise.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      claimButton.textContent = 'Robuxy odebrane ✓';
+      claimButton.disabled = true;
+    });
+  </script>
+</body>
+</html>
